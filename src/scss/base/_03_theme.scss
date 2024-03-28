@@ -1,0 +1,18 @@
+:root {
+	@each $name, $color in $colors{
+			--color-#{$name} : #{$color};
+	}
+--theme: 'light';
+}
+
+@media(prefers-color-scheme: dark) {
+	:root {
+			@each $name, $color in $colors-dark{
+					--color-#{$name} : #{$color};
+			}
+	--theme : 'dark';
+	}
+}
+@function getColor($color-name){
+	@return var(--color-#{$color-name});
+}

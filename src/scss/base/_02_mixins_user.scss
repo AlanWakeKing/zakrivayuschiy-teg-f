@@ -1,0 +1,41 @@
+@mixin font-face-variations($name, $file, $weight: 400,$stretch: normal, $style: normal) {
+	@font-face {
+		font-family: "#{$name}";
+		src: local("#{$file}"),
+		url('../fonts/#{$file}.woff2') format('woff2 supports variations'),
+		url('../fonts/#{$file}.woff2') format('woff2-variations');
+		font-weight: $weight;
+    font-stretch: $stretch;
+		font-style: $style;//ultra-condensed — 50%;
+		font-display: swap;//extra-condensed — 62.5%;
+											 //condensed — 75%;
+											 //semi-condensed — 87.5%;
+											 //normal — 100%;
+											 //semi-expanded — 112.5%;
+											 //expanded — 125%;
+											 //extra-expanded — 150%;
+											 //ultra-expanded — 200%.
+	}
+}
+@mixin border-img-big($size,$line,$url,$slice,$repeat,$width,$outset){
+	border: $size $line transparent;
+  border-image-source: url($url);
+	border-image-slice:$slice; //"number | % | fill | initial | inherit";
+	border-image-repeat:$repeat;//"stretch | repeat | round | space | initial | inherit" - неболе двух значений
+	border-image-width: $width;
+	border-image-outset:$outset;
+}
+@mixin border-img-light($url,$slice,$width,$outset,$repeat){
+	border-image: url($url) $slice / $width / $outset $repeat;
+}
+@mixin font-variation($wght,$wdth,$opsz){
+	font-variation-settings: 'wght' $wght, 'wdth' $wdth, 'opsz' $opsz;
+}
+
+@mixin box-shadow($string){
+	box-shadow:$string;
+}
+
+@mixin text-shadow($string){
+	text-shadow:$string;
+}
