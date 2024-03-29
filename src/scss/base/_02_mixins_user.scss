@@ -17,6 +17,10 @@
 											 //ultra-expanded — 200%.
 	}
 }
+@mixin font-variation($wght:0,$wdth:0,$opsz:0){
+	font-variation-settings: 'wght' $wght, 'wdth' $wdth, 'opsz' $opsz;
+}
+
 @mixin border-img-big($size,$line,$url,$slice,$repeat,$width,$outset){
 	border: $size $line transparent;
   border-image-source: url($url);
@@ -28,10 +32,6 @@
 @mixin border-img-light($url,$slice,$width,$outset,$repeat){
 	border-image: url($url) $slice / $width / $outset $repeat;
 }
-@mixin font-variation($wght,$wdth,$opsz){
-	font-variation-settings: 'wght' $wght, 'wdth' $wdth, 'opsz' $opsz;
-}
-
 @mixin box-shadow($string){
 	box-shadow:$string;
 }

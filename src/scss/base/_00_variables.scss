@@ -1,14 +1,22 @@
 //light theme
-$colors: (
+$theme-light: (
     base : #ffffff,
     text : #000000,
-    base2 : #eeeeee,
-    text2 : #111111
+		heart:#ff0000,
+		gradient-first-color:rgb(231, 231, 231),
+		gradient-two-color:rgb(26, 26, 26),
+		border:#000000,
+		font-primer:Inter,
+		font-secondery:press-start-2p
 );
 //dark theme
-$colors-dark: (
+$theme-dark: (
     base : #000000,
-    text: #ffffff,
-    base2: #111111,
-    text2: #eeeeee
+    text: #00CC14,
+		heart:#ff0000,
+		gradient-first-color:rgb(0, 127, 12),
+		gradient-two-color:rgb(0, 67, 6),
+		border:#00CC14,
+		font-primer:Inter,
+		font-secondery:press-start-2p
 );

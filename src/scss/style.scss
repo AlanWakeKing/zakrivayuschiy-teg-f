@@ -3,35 +3,24 @@
 @import '**/_*.scss';
 @import '../components/**/*.scss';
 
+html{
+	background-color: getColor(base);
+}
 body{
-    background: getColor(base);
-    margin: 0;
-    padding: 0;
-
+	max-width: 700px;
+	font-family: getColor(font-primer),sans-serif;
+	margin:auto;
 }
-.container{
-    background: getColor(base);
-    color: getColor(text);
-    margin-top: 50px;
-    .card{
-        height: auto;
-        width: 300px;
-        margin: 0 auto;
-        border-radius: 20px;
-        background: getColor(base2);
-        padding: 20px;
-      h1{
-        &:after{
-          content: var(--theme);
-        }        
-      }
-        p{
-            color: getColor(text2);
-        }
-    }
+@supports (font-variation-settings: normal) {
+		body {
+			font-family: getColor(font-primer),sans-serif;
+	}
 }
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+	color: getColor(text);
+	@include font-variation(465);
+	// font-variation-settings:465;
 }
+@import '../components/**/**/*.scss';
