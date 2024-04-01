@@ -2,21 +2,25 @@
 $theme-light: (
     base : #ffffff,
     text : #000000,
+		mix-blend-mode:#fff,
 		heart:#ff0000,
 		gradient-first-color:rgb(231, 231, 231),
 		gradient-two-color:rgb(26, 26, 26),
 		border:#000000,
 		font-primer:Inter,
-		font-secondery:press-start-2p
+		font-secondery:press-start-2p,
+		font-variation-setting:700
 );
 //dark theme
 $theme-dark: (
     base : #000000,
     text: #00CC14,
+		mix-blend-mode:#00CC14,
 		heart:#ff0000,
 		gradient-first-color:rgb(0, 127, 12),
 		gradient-two-color:rgb(0, 67, 6),
 		border:#00CC14,
 		font-primer:Inter,
-		font-secondery:press-start-2p
+		font-secondery:press-start-2p,
+		font-variation-setting:465
 );

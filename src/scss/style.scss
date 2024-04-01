@@ -5,6 +5,28 @@
 
 html{
 	background-color: getColor(base);
+    color: var(--text-color);
+    background: repeating-linear-gradient(
+      90deg,
+      getColor(base),
+      getColor(base) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      getColor(gradient-first-color),
+      getColor(gradient-two-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      getColor(gradient-first-color) 0.01%,
+      getColor(gradient-two-color)
+    );
+		background-attachment: fixed;
+    background-size: cover;
 }
 body{
 	max-width: 700px;
@@ -20,7 +42,13 @@ body{
   min-inline-size: 320px;
   min-block-size: 100dvb;
 	color: getColor(text);
-	@include font-variation(465);
-	// font-variation-settings:465;
+	@include font-variation(getColor(font-variation-setting));
+}
+.like-icon {
+	width: inherit;
+	height: inherit;
+	fill: var(--text-color);
+	position: relative;
+	z-index: 1;
 }
 @import '../components/**/**/*.scss';

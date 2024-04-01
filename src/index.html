@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-@@include('components/page-blocks/_head.html',{
+@@include('components/page-blocks/base/_head.html',{
 "lang":"ru",
 "title":"Закрывающий тег",
 "description":"Gulp pack for easy html markup development",
@@ -8,14 +8,14 @@
 })
 
 <body class="page">
-	@@include('components/page-blocks/_header.html',{
+	@@include('components/page-blocks/bem-block/_header.html',{
 		"title":"Закрывающий тег"
 	})
 	<main class="main">
-		
+	@@loop('components/page-blocks/bem-block/_section.html','components/page-blocks/bem-block/article.json')
 	</main>
-	@@include('components/page-blocks/_footer.html')
-	@@include('components/page-blocks/_scripts.html')
+	@@include('components/page-blocks/base/_footer.html')
+	@@include('components/page-blocks/base/_scripts.html')
 </body>
 
 </html>

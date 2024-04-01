@@ -1,0 +1,162 @@
+.main{
+	@extend .flex;
+	@extend .--dir-col;
+	gap:54px;
+}
+.card{
+	border: 2px solid getColor(border);
+	background-color: getColor(base);
+	&__title{
+		font-size: 18px;
+		@include font-variation(getColor(font-variation-setting));
+		padding: 4px 10px;
+	}
+	&__image {
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+		border-top: 2px solid getColor(border);
+		border-bottom:2px solid getColor(border);
+	}
+	&__text-container {
+		padding: 26px 25px;
+		font-size: 18px;
+		display: flex;
+		flex-direction: column;
+		gap: 26px;
+	}
+	&__icon-button {
+		padding: 0;
+		width: 39px;
+		height: 36px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		&:focus {
+			outline: none;
+		}
+		&:focus-visible {
+			outline: 2px solid var(--stroke-color);
+		}
+	}
+	&__like-button {
+		width: 130px;
+		padding: 10px 0;
+		&-container {
+			display: flex;
+			align-items: center;
+			justify-content: end;
+			gap: 6px;
+		}
+	}
+}
+.like-icon {
+  width: inherit;
+  height: inherit;
+  fill: getColor(text);
+  position: relative;
+  z-index: 1;
+
+  .heart {
+    transition: fill 0.1s;
+    transform-origin: center center;
+  }
+
+  .contour {
+    fill: getColor(text);
+  }
+
+  .main-body {
+    fill: getColor(base);
+    transition: fill 0.3s linear;
+  }
+
+  .core {
+    fill: getColor(base);
+    transition: fill 0.3s 0.05s;
+  }
+
+  .sparks {
+    opacity: 0;
+    fill: getColor(heart);
+  }
+
+  &:hover {
+    .main-body {
+      fill: getColor(text);
+    }
+
+    .core {
+      fill: getColor(text);
+    }
+  }
+
+  &:active {
+    .main-body {
+      fill: getColor(heart);
+    }
+
+    .core {
+      fill: getColor(heart);
+    }
+  }
+
+  &.is-liked {
+    .contour {
+      fill: getColor(heart);
+    }
+
+    .main-body {
+      fill: getColor(heart);
+    }
+
+    .core {
+      fill: getColor(heart);
+    }
+  }
+}
+.button {
+  font-family: getColor(font-secondery);
+  position: relative;
+  overflow: hidden;
+  color: getColor(mix-blend-mode);
+  background: none;
+  border: 2px solid getColor(text);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: getColor(text);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      transform: translateX(0);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 2px 2px 0px 0px getColor(text);
+  }
+
+  &__text {
+    color: getColor(mix-blend-mode);
+    mix-blend-mode: difference;
+  }
+}

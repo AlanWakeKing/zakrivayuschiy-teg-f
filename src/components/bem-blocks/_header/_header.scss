@@ -7,7 +7,7 @@
 	margin-block-start:104px;
 	margin-block-end: 104px;
 	font-family: getColor(font-secondery),fantasy;
-	padding:136px 120px;
+	padding:136px 0 25px;
 	border:2px solid getColor(border); 
 	&__link{
 		font-size:clamp(3.0625rem, calc(2.7104rem + 1.5023vw), 4.0625rem);
@@ -21,6 +21,57 @@
 	&__theme-menu{
 		@extend .flex;
 		justify-content: center;
+		@extend .--dir-col;
 	}
-
+}
+.theme-menu{
+	&__list{
+		@extend .flex;
+		@extend .--dir-col;
+		font-size: 14px;
+		gap:14px;
+		width: min-content;
+    text-align: start;
+	}
+	&__item{
+		position: relative;
+	}
+	&__button{
+		padding: 0;
+		text-transform: uppercase;
+		background: none;
+		border: none;
+		overflow: hidden;
+		opacity: 1;
+		transition: opacity 0.3s ease;
+		cursor: pointer;
+		&:disabled{
+			opacity: 0.6;
+			pointer-events: none;
+		&::before{
+			content: "▶";
+			position: absolute;
+			left: -15px;
+			}
+		}
+		&:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: var(--text-color);
+			opacity: 0.6;
+			transition: transform 0.3s ease;
+			transform: translateX(-100%);
+		}
+		&:hover,&:focus,&:focus-visible{
+			opacity: 0.6;
+		}
+		&:focus{
+			outline: none;
+		}
+		&:focus-visible::after {
+			transform: translateX(0);
+		}
+	}
 }
