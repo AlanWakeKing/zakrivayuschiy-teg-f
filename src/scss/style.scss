@@ -31,6 +31,7 @@ html{
 body{
 	max-width: 700px;
 	font-family: getColor(font-primer),sans-serif;
+	font-size: 18px;
 	margin:auto;
 }
 @supports (font-variation-settings: normal) {
@@ -42,7 +43,7 @@ body{
   min-inline-size: 320px;
   min-block-size: 100dvb;
 	color: getColor(text);
-	@include font-variation(getColor(font-variation-setting));
+	@include font-variation(getColor(text-variation-setting));
 }
 .like-icon {
 	width: inherit;
@@ -51,4 +52,42 @@ body{
 	position: relative;
 	z-index: 1;
 }
+.grayscale {
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+}
+
+.hue-rotate {
+  -webkit-filter: hue-rotate(30deg);
+  filter: hue-rotate(30deg);
+}
+
+.saturate {
+  -webkit-filter: saturate(360%);
+  filter: saturate(360%);
+}
+
+.invert {
+  -webkit-filter: invert(80%);
+  filter: invert(80%);
+}
+
+.sepia {
+  -webkit-filter: sepia(80%);
+  filter: sepia(80%);
+}
+
+.blur {
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+}
+
+.multi-filter {
+  -webkit-filter: saturate(250%) hue-rotate(90deg) grayscale(20%) invert(25%)
+    blur(2px);
+  filter: saturate(250%) hue-rotate(90deg) grayscale(20%) invert(25%) blur(2px);
+}
 @import '../components/**/**/*.scss';
+@import 'media';
+
+

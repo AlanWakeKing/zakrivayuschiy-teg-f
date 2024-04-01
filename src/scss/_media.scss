@@ -1,0 +1,13 @@
+@media (width <= 375px) {
+	.dialog{	
+		.save-button{
+		flex-direction: column;
+		}
+		.dialog{
+			&__container{
+				gap: 28px;
+			}
+		}	
+	 	padding: 30px 40px;
+	}
+}

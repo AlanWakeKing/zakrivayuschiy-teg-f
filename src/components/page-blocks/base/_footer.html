@@ -1,1 +1,25 @@
-<footer class="footer"></footer>
+<footer class="footer"><dialog class="dialog" id="dialog-id">
+	<div class="dialog__container">
+		<div class="dialog__text-container">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				class="floppy-image"
+				viewbox="0 0 21 21"
+			>
+				<use href="./img/svg/sprite.svg#floppy" />
+			</svg>
+			<p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+		</div>
+		<form>
+			<button
+				class="button ok-button"
+				onclick="window['dialog-id'].close()"
+				type="submit"
+				aria-controls="dialog-id"
+			>
+				<span class="button__text">Ok</span>
+			</button>
+		</form>
+	</div>
+</dialog></footer>

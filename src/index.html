@@ -13,6 +13,21 @@
 	})
 	<main class="main">
 	@@loop('components/page-blocks/bem-block/_section.html','components/page-blocks/bem-block/article.json')
+	<button
+	class="button save-button"
+	onclick="window['dialog-id'].showModal()"
+	aria-controls="dialog-id"
+>
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		fill="none"
+		class="floppy-image"
+		viewbox="0 0 21 21"
+	>
+		<use href="./img/svg/sprite.svg#floppy" />
+	</svg>
+	<span class="button__text">Сохранить на память</span>
+</button>
 	</main>
 	@@include('components/page-blocks/base/_footer.html')
 	@@include('components/page-blocks/base/_scripts.html')

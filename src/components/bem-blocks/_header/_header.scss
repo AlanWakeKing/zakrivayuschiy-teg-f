@@ -59,7 +59,7 @@
 			display: block;
 			width: 100%;
 			height: 2px;
-			background-color: var(--text-color);
+			background-color: getColor(text);
 			opacity: 0.6;
 			transition: transform 0.3s ease;
 			transform: translateX(-100%);

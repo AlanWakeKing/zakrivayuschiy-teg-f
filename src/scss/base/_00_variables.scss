@@ -9,7 +9,8 @@ $theme-light: (
 		border:#000000,
 		font-primer:Inter,
 		font-secondery:press-start-2p,
-		font-variation-setting:700
+		text-variation-setting:400,
+		title-variation-setting:700
 );
 //dark theme
 $theme-dark: (
@@ -22,5 +23,6 @@ $theme-dark: (
 		border:#00CC14,
 		font-primer:Inter,
 		font-secondery:press-start-2p,
-		font-variation-setting:465
+		text-variation-setting:400,
+		title-variation-setting:800
 );
