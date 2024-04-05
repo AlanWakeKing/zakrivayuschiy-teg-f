@@ -1,14 +1,15 @@
 <!-- @@title -->
-<article class="card @@after">
+<article class="card">
 	<h2 class="card__title">@@title</h2>
 	<div class="card__img-contener">
-		<img src="@@img" alt="@@title" class="card__image @@filter">
+		<span class="lable-text">@@after</span>
+		<img src="@@img" alt="@@title" loading="lazy" class="card__image @@filter">
 	</div>
 	<div class="card__text-container">
 		<p class="card__text">@@text-first</p>
 		<p class="card__text">@@text-two</p>
 		<div class="card__like-button-container">
-			<button class="card__icon-button" aria-labelledby="html-1">
+			<button class="card__icon-button" type="button" aria-labelledby="html-1">
 				<svg xmlns="http://www.w3.org/2000/svg" class="like-icon" viewBox="0 0 39 36" fill="none" aria-hidden="true">
 					<g class="heart">
 						<path class="contour" fill="var(--color-text)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"></path>
@@ -18,7 +19,7 @@
 					</g>
 				</svg>
 			</button>
-			<button class="card__like-button button" type="button" id="html-1">
+			<button class="card__like-button button" type="button" id="html-@@id">
 				<span class="button__text">Like</span>
 			</button>
 		</div>

@@ -1,7 +1,8 @@
 .main {
   @extend .flex;
   @extend .--dir-col;
-  gap: 54px;
+  gap: 51px;
+	margin-block-end: 105px;
 }
 .card {
   border: 2px solid getColor(border);
@@ -39,6 +40,9 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    outline: 2px solid transparent;
+    transition: outline 0.3s ease;
+
     &:focus {
       outline: none;
     }
@@ -57,79 +61,27 @@
     }
   }
 }
-.html,
-.css,
-.desigions,
-.care,
-.support,
-.lifes-style,
-.experience {
-  &::after {
-    font-family: getColor(font-secondery);
-    font-size: 14px;
-    @include font-variation(getColor(text-variation-setting));
-    z-index: 1;
-    opacity: 0.5;
-    mix-blend-mode: hard-light;
-    text-shadow: -1px 0 getColor(base), 0 1px getColor(base),
-      1px 0 getColor(base), 0 -1px getColor(base);
-    right: 25px;
-    top: 60px;
-    position: absolute;
-  }
+.lable-text {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  z-index: 1;
+  font-family: getColor(font-secondery);
+  font-size: 14px;
+  @include font-variation(getColor(text-variation-setting));
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  text-shadow: -1px 0 getColor(base), 0 1px getColor(base), 1px 0 getColor(base),
+    0 -1px getColor(base);
 }
 @supports (text-stroke: 1px getColor(base)) or
   (-webkit-text-stroke: 1px getColor(base)) {
-  .html,
-  .css,
-  .desigions,
-  .care,
-  .support,
-  .lifes-style,
-  .experience {
-    &::after {
-      text-shadow: none;
-      -webkit-text-stroke: 1px getColor(base);
-      text-stroke: 1px getColor(base);
-    }
+  .lable-text {
+    text-shadow: none;
+    -webkit-text-stroke: 1px getColor(base);
+    text-stroke: 1px getColor(base);
   }
 }
-.html {
-  &::after {
-    content: '</HTML>';
-  }
-}
-.css {
-  &::after {
-    content: '<CSS>';
-  }
-}
-.desigions {
-  &::after {
-    content: '<desigions>';
-  }
-}
-.care {
-  &::after {
-    content: 'care';
-  }
-}
-.support {
-  &::after {
-    content: '<support>';
-  }
-}
-.lifes-style {
-  &::after {
-    content: '<lifes-style: none>';
-  }
-}
-.experience {
-  &::after {
-    content: '<experience>';
-  }
-}
-
 .like-icon {
   width: inherit;
   height: inherit;
@@ -197,7 +149,7 @@
 }
 .button {
   font-family: getColor(font-secondery);
-	font-size: 14px;
+  font-size: 14px;
   position: relative;
   overflow: hidden;
   color: getColor(mix-blend-mode);
@@ -239,7 +191,7 @@
     mix-blend-mode: difference;
   }
   .floppy-image {
-    width: 39px;
+    width: 21px;
     mix-blend-mode: difference;
   }
 }
@@ -250,10 +202,6 @@
   gap: 8px;
   align-items: center;
   background: getColor(base);
-
-  @media (width <= 375px) {
-    flex-direction: column;
-  }
 }
 
 .ok-button {
@@ -264,10 +212,11 @@
 }
 .dialog {
   font-family: getColor(font-secondery), sans-serif;
-	font-size: 14px;
+  font-size: 14px;
   padding: 30px 26px;
   color: getColor(text);
   background: getColor(base);
+	margin: auto;
   border: 2px solid getColor(text);
 
   &::-webkit-backdrop {

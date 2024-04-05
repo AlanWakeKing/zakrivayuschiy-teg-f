@@ -1,13 +1,30 @@
 @media (width <= 375px) {
-	.dialog{	
-		.save-button{
-		flex-direction: column;
-		}
-		.dialog{
-			&__container{
-				gap: 28px;
-			}
-		}	
-	 	padding: 30px 40px;
+  .header {
+    padding: 120px 0 24px;
+  }
+  .theme-menu__list {
+    margin: 0 41.1%;
+  }
+	.main{
+		margin-block-end: 102px;
+		gap: 50px;
 	}
+  .save-button {
+    flex-direction: column;
+  }
+  .button .floppy-image {
+    width: 28px;
+  }
+  .dialog {
+    .save-button {
+      padding: 15px 15px;
+      flex-direction: column;
+    }
+    .dialog {
+      &__container {
+        gap: 28px;
+      }
+    }
+    padding: 30px 40px;
+  }
 }

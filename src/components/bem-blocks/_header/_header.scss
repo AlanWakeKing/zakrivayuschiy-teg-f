@@ -1,13 +1,10 @@
 .header{
-	display: flex;
-	@extend .--just-center;
-	@extend .--dir-col;
-	@extend .--align-center;
+	text-align: center;
 	background-color: getColor(base);
-	margin-block-start:104px;
-	margin-block-end: 104px;
+	margin:100px 0;
 	font-family: getColor(font-secondery),fantasy;
-	padding:136px 0 25px;
+	padding-block-start: 136px;
+  padding-block-end: 23px;
 	border:2px solid getColor(border); 
 	&__link{
 		font-size:clamp(3.0625rem, calc(2.7104rem + 1.5023vw), 4.0625rem);
@@ -16,12 +13,7 @@
 	&__title{
 		font-size: clamp(0.875rem, calc(0.6769rem + 0.8451vw), 1.4375rem);
 		text-transform: uppercase;
-    margin: 20px 0 25px;
-	}
-	&__theme-menu{
-		@extend .flex;
-		justify-content: center;
-		@extend .--dir-col;
+		margin: 20px 0 25px;
 	}
 }
 .theme-menu{
@@ -29,9 +21,10 @@
 		@extend .flex;
 		@extend .--dir-col;
 		font-size: 14px;
-		gap:14px;
+		gap: 12px;
 		width: min-content;
     text-align: start;
+		margin: 0 45.3%;
 	}
 	&__item{
 		position: relative;
