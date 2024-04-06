@@ -1,3 +1,10 @@
+@media(prefers-color-scheme: light) {
+	:root {
+			@each $name, $color in $theme-light{
+				--color-#{$name} : #{$color};
+		}
+	}
+}
 @media(prefers-color-scheme: dark) {
 	:root {
 			@each $name, $color in $theme-dark{
@@ -5,16 +12,16 @@
 		}
 	}
 }
-.theme-light{
-	@each $name, $color in $theme-light{
-			--color-#{$name} : #{$color};
+	.theme-light{
+		@each $name, $color in $theme-light{
+				--color-#{$name} : #{$color};
+		}
 	}
-}
-.theme-dark{
-	@each $name, $color in $theme-dark{
-			--color-#{$name} : #{$color};
+	.theme-dark{
+		@each $name, $color in $theme-dark{
+				--color-#{$name} : #{$color};
+		}
 	}
-}
 @function getColor($color-name){
 	@return var(--color-#{$color-name});
 }
